@@ -1,5 +1,4 @@
 <?php
-
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -76,7 +75,6 @@ function selectfile($namee, $naamfile){
             $filenaam = new filehandler($_POST['file']);
             $htmloutput = selectfile($filenaam, $filename);    
             echo $htmloutput;
-
         }
         
         if (isset($_POST['copy'])) {
@@ -84,9 +82,6 @@ function selectfile($namee, $naamfile){
             $filename = $_POST['copy'];
             $filenaam = new filehandler($filename);
             $filenaam->updatefile($inhoud);
-            $htmloutput = selectfile($filenaam, $filename); 
-            echo $htmloutput;
+
         }
      }
- 
-     

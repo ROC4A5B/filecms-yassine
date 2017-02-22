@@ -1,4 +1,3 @@
-
 <?php include 'filehandler.class.php';?>
 <!DOCTYPE html>
 <html>
@@ -11,12 +10,6 @@
          </form>
         <div class='kiezen'></div>
         <div class='hans'>
-            <form  method='post' class='select'>
-                <input style='display:none;' type='text' name='copy' value='".$naamfile."'>
-                 <textarea name='inhoud'>".$namee->readfile()."</textarea><br>
-                 <input class='updatehet' type='submit' value='Change'>
-            </form>  
-    
         </div>
              <script>
                  var inputform = "";
@@ -49,6 +42,4 @@
             </script>
     </body>
 </html>
-
-
 
