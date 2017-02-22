@@ -7,10 +7,22 @@
     <body>
         <form action='filehandler.class.php' method='post' class='select' >
         <?=filehandler::listfile(); ?>
+         <input type='submit' name='clicken' class='kiesjefile'  value='tonen'> 
          </form>
+
         <div class='kiezen'></div>
+                
+        <form action='filehandler.class.php' method='post' class='select'>
+        <input name='newfile' type='text'>
+        <input type='submit' name='clicken' value = 'new file'>
+        </form>
         <div class='hans'>
         </div>
+        
+        <form action='filehandler.class.php' method='post'>
+            <input type='text' name='morefiles'>
+            <input type='submit' name='run' value="run">
+        </form>
              <script>
                  var inputform = "";
                  $('form').on('submit', function() {
@@ -31,9 +43,13 @@
                            type: method,
                            data: data,
                            success: function(response){
+                                if(response === 'refresh'){
+                                   location.reload();
+                               }else{
                                $('div.kiezen').html(response);
                                inputform = response;
                                console.log(inputform);
+                               }
                            }
                        });
                     return false;
